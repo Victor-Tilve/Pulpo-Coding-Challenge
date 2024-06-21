@@ -1,4 +1,4 @@
-import { IIatiDatastoreApiData } from '../../domain/useCases/IATIDatastoreApi/IatiDatastoreApi-interface'
+import { IMonetaryAidLast5Years } from '../../domain/useCases/IATIDatastoreApi/monetaryAidLast5Years-interface'
 import { MissingFormalParameter, WrongCountryCode } from '../../errors/client-error'
 import { badRequest, serverError, success } from '../../helpers/http-helper'
 import { IsoAlpha2 } from '../../helpers/ISO3166Alpha2-helper'
@@ -7,8 +7,8 @@ import { HttpRequest, HttpResponse } from '../../interfaces/http-interface'
 
 /* It takes a country code as a parameter, checks if it's a valid country code, and if it is, it calls
 the dataIATIDatastoreApi to get the monetary aid data for that country */
-export class IatiDatastoreGetMonetaryAidLast5YearsController implements Controller {
-  constructor (private readonly dataIATIDatastoreApi: IIatiDatastoreApiData) {
+export class MonetaryAidLast5YearsController implements Controller {
+  constructor (private readonly dataIATIDatastoreApi: IMonetaryAidLast5Years) {
     this.dataIATIDatastoreApi = dataIATIDatastoreApi
   }
 

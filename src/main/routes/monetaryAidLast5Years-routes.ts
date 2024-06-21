@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import { validateToken } from '../../helpers/token-helper'
 import { AdapterRoute } from '../adapters/express-adapter'
-import { makeGetMonetaryAidController } from '../factories/IatiDatastoreApi-factory'
+import { makeGetMonetaryAidController } from '../factories/monetaryAidLast5Years-factory'
 
 /* A function that is being exported to set and endpoint. */
 export default (router: Router): void => {
